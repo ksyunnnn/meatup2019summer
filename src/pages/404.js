@@ -1,14 +1,37 @@
-import React from "react"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import styled from 'styled-components';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+
+
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+`;
 
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+    <Wrapper>
+      <div>
+        <h1>404 NOT FOUND</h1>
+        <p>
+ページが見つかりません
+          <span role="img" aria-label="niku sweat">🍖💦</span>
+        </p>
+        <p>
+          <br />
+          <Link to="/">戻る</Link>
+        </p>
 
-export default NotFoundPage
+      </div>
+    </Wrapper>
+  </Layout>
+);
+
+export default NotFoundPage;
