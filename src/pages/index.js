@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import OnikuImage from '../components/OnikuImage';
+import OnikuImage from '../components/molecules/Images/OnikuImage';
 import SEO from '../components/seo';
 
 const MainWrapper = styled.div`

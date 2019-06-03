@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './layout.css';
+import '../assets/layout.css';
 
 export default ({ children }) => (
   <>
