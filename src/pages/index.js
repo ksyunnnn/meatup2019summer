@@ -6,6 +6,11 @@ import Layout from '../components/layout';
 import OnikuImage from '../components/molecules/Images/OnikuImage';
 import SEO from '../components/seo';
 
+import Oniku01 from '../components/molecules/Images/Oniku01';
+import Oniku02 from '../components/molecules/Images/Oniku02';
+import Atom01 from '../components/molecules/Images/Atom01';
+import Atom02 from '../components/molecules/Images/Atom02';
+
 const orange = '#FF6500';
 
 const MainWrapper = styled.div`
@@ -78,12 +83,27 @@ const StyledButton = styled.button`
 `;
 
 const DetailSection = styled.section`
-  background: #F8F8F8;
+  padding: 0 36px;
   padding-top: 74px;
+  background: #F8F8F8;
   text-align: center;
   h2 {
     font-size: 40px;
     text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 40px;
+  }
+  .photo-list {
+    display: grid;
+    row-gap: 24px;
+    > * {
+      border: 5px solid #FFFFFF;
+    }
   }
 `;
 
@@ -126,7 +146,13 @@ export default () => (
 
       <DetailSection>
         <h2>About MEATUP</h2>
-        <p>肉を通してわいがや交流するイベントです</p>
+        <h3>肉を通してわいがや交流するイベントです</h3>
+        <div className="photo-list">
+          <Oniku01 />
+          <Atom01 />
+          <Oniku02 />
+          <Atom02 />
+        </div>
       </DetailSection>
     </MainWrapper>
   </Layout>
