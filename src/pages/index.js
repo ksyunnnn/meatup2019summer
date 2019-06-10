@@ -10,6 +10,7 @@ import Oniku01 from '../components/molecules/Images/Oniku01';
 import Oniku02 from '../components/molecules/Images/Oniku02';
 import Atom01 from '../components/molecules/Images/Atom01';
 import Atom02 from '../components/molecules/Images/Atom02';
+import HeaderComponent from '../components/molecules/header/header-component';
 
 const orange = '#FF6500';
 
@@ -55,7 +56,7 @@ const HeroSection = styled.section`
     span { display: block; }
     .place {
       padding-top: 1.5em;
-      i { 
+      i {
         margin-right: 8px;
         color: ${orange};
        }
@@ -111,6 +112,7 @@ export default () => (
   <Layout>
     <SEO title="Home" />
     <MainWrapper>
+     <Header />
       <HeroSection>
         <h3>
           参加者募集開始〜
