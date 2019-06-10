@@ -10,7 +10,7 @@ import Oniku01 from '../components/molecules/Images/Oniku01';
 import Oniku02 from '../components/molecules/Images/Oniku02';
 import Atom01 from '../components/molecules/Images/Atom01';
 import Atom02 from '../components/molecules/Images/Atom02';
-import HeaderComponent from '../components/molecules/header/header-component';
+import Header from '../components/molecules/header';
 
 const orange = '#FF6500';
 
@@ -112,7 +112,7 @@ export default () => (
   <Layout>
     <SEO title="Home" />
     <MainWrapper>
-     <Header />
+      <Header />
       <HeroSection>
         <h3>
           参加者募集開始〜
