@@ -11,8 +11,9 @@ import Oniku02 from '../components/molecules/Images/Oniku02';
 import Atom01 from '../components/molecules/Images/Atom01';
 import Atom02 from '../components/molecules/Images/Atom02';
 import Forms from '../components/organisms/Forms';
+import DataBox from '../components/molecules/DataBox';
 
-const orange = '#FF6500';
+import { colors } from '../helpers/State';
 
 const MainWrapper = styled.div`
   padding-bottom: 176px;
@@ -37,8 +38,8 @@ const HeroSection = styled.section`
     }
   }
   span.year {
-    background: ${orange};
-    color: #fff;
+    background: ${colors.orange};
+    color: ${colors.white};
     font-size: 40px;
     padding: 0 8px;
     margin-right: 16px;
@@ -58,7 +59,7 @@ const HeroSection = styled.section`
       padding-top: 1.5em;
       i { 
         margin-right: 8px;
-        color: ${orange};
+        color: ${colors.orange};
        }
     }
   }
@@ -72,11 +73,11 @@ const HeroSection = styled.section`
 const StyledButton = styled.button`
   width: 300px;
   height: 48px;
-  color: ${props => props.orange && orange};
+  color: ${props => props.orange && colors.orange};
   font-weight: 800;
   border: 3px solid;
   border-radius: 24px;
-  background: #FFFFFF;
+  background: ${colors.white};
   font-size: 16px;
   :active {
     background: #eee;
@@ -86,7 +87,7 @@ const StyledButton = styled.button`
 const DetailSection = styled.section`
   padding: 0 36px;
   padding-top: 74px;
-  background: #F8F8F8;
+  background: ${colors.gray};
   text-align: center;
   h2 {
     font-size: 40px;
@@ -102,8 +103,21 @@ const DetailSection = styled.section`
   .photo-list {
     display: grid;
     row-gap: 24px;
+    margin-bottom: 80px;
     > * {
-      border: 5px solid #FFFFFF;
+      border: 5px solid ${colors.white};
+    }
+  }
+  .data-list {
+    padding-bottom: 50px;
+    li {
+      list-style: none;
+    }
+    h4 {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 1.46px;
     }
   }
 `;
@@ -159,6 +173,37 @@ export default () => (
           <Oniku02 />
           <Atom02 />
         </div>
+
+        <h2>
+          MEMBER
+          <br />
+          DATA
+        </h2>
+        <h3>
+          現在受付けている参加者データです
+          <span role="img" aria-label="hand">✌</span>
+        </h3>
+        <ul className="data-list">
+          <li>
+            <DataBox>
+              <h4>男女比</h4>
+            </DataBox>
+          </li>
+          <li>
+            <DataBox>
+              <h4>Web歴</h4>
+            </DataBox>
+          </li>
+          <li>
+            <DataBox>
+              <h4>職業マップ</h4>
+              {/*
+                [TODO]このイメージ
+                https://images.app.goo.gl/BuCu2w8DXe1ZGQpW6
+               */}
+            </DataBox>
+          </li>
+        </ul>
       </DetailSection>
       {/* WIP <FormSection>
         <h2>JOINFORM</h2>
