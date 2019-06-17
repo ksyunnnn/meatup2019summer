@@ -5,6 +5,7 @@
       "react/no-unused-state": 1,
       "no-unused-vars": 0,
       "react/jsx-filename-extension": 0,
-      "react/prop-types": 0
+      "react/prop-types": 0,
+      "jsx-a11y/label-has-for": 0
     }
 }

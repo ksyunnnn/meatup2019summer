@@ -10,6 +10,7 @@ import Oniku01 from '../components/molecules/Images/Oniku01';
 import Oniku02 from '../components/molecules/Images/Oniku02';
 import Atom01 from '../components/molecules/Images/Atom01';
 import Atom02 from '../components/molecules/Images/Atom02';
+import Forms from '../components/organisms/Forms';
 
 const orange = '#FF6500';
 
@@ -107,6 +108,11 @@ const DetailSection = styled.section`
   }
 `;
 
+const FormSection = styled.section`
+  padding: 0 40px;
+  padding-top: 74px;
+`;
+
 export default () => (
   <Layout>
     <SEO title="Home" />
@@ -154,6 +160,10 @@ export default () => (
           <Atom02 />
         </div>
       </DetailSection>
+      {/* WIP <FormSection>
+        <h2>JOINFORM</h2>
+        <Forms />
+      </FormSection> */}
     </MainWrapper>
   </Layout>
 );
