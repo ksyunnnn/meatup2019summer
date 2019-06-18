@@ -21,3 +21,25 @@ body {
 a {
   color: inherit;
 }
+
+li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+h3 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+h4 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.46px;
+  }
