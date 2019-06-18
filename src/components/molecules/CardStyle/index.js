@@ -10,6 +10,7 @@ export default styled.div`
     border: 4px solid #151515;
     background: ${colors.white};
     padding: 24px 0;
+    ${props => (props.paddingZero ? 'padding: 0;' : '')}
     ::before {
     content: "";
     display: inline-block;

@@ -70,7 +70,7 @@ const copyToClipboard = () => {
 };
 
 const MainWrapper = styled.div`
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 `;
 
 const HeroSection = styled.section`
@@ -125,15 +125,17 @@ const HeroSection = styled.section`
   }
 `;
 
-const StyledButton = styled.button`
+const StyledButton = styled(Link)`
   width: 300px;
   height: 48px;
+  line-height: 48px;
   color: ${props => props.orange && colors.orange};
   font-weight: 800;
   border: 3px solid;
   border-radius: 24px;
   background: ${colors.white};
   font-size: 16px;
+  text-decoration: none;
   :active {
     background: #eee;
   }
@@ -222,11 +224,21 @@ const Footer = styled.footer`
   text-align: center;
 `;
 
+const ScrollToTopButton = styled(Link)`
+  position: fixed;
+  font-size: 48px;
+  bottom: 4px;
+  right: 4px;
+  height: 64px;
+  width: 64px;
+  text-align: center;
+`;
+
 export default () => (
   <Layout>
     <SEO title="Home" />
     <MainWrapper>
-      <HeroSection>
+      <HeroSection id="top">
         <h3>
           参加者募集開始〜
           <span role="img" aria-label="tada">🎉</span>
@@ -240,27 +252,31 @@ export default () => (
         </h1>
         <div className="oniku"><OnikuImage /></div>
         <div className="date">
-          <span>2019.07.20(Sat.)</span>
+          <span>
+            <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MW5mcTlrbmJ1ZGZsYmt1dWo0MG5qczYyaW4gZnBvbGdxZ2wzYmdlcnE2NTJzaHIwaG9uc2NAZw&amp;tmsrc=fpolgqgl3bgerq652shr0honsc%40group.calendar.google.com"><i style={{ marginRight: '8px', color: colors.orange }} className="far fa-calendar-plus" /></a>
+            2019.07.20(Sat.)
+          </span>
           <span>11:00 open ~ 19:00 close </span>
           <span>entry ¥4,000</span>
           <span className="place">
-            <i className="fas fa-map-marker-alt" />
-            EAT TOKYO STUDIO JAX
+            <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/NX273kTyHT5NrSvF8"><i className="fas fa-map-marker-alt" /></a>
+            EAT TOKYO JAKUZURE
           </span>
+          <span style={{ fontSize: '16px' }}>東京都目黒区上目黒5-30-12</span>
         </div>
         <div className="button-wrapper">
-          <StyledButton orange onClick={() => console.log('hoge')}>
+          <StyledButton orange to="/#joinform">
             <i className="fas fa-angle-double-down" style={{ marginRight: '8px' }} />
             はよ参加登録させてくれ
           </StyledButton>
-          <StyledButton onClick={() => console.log('hoge')}>
+          <StyledButton to="/#detail">
             <i className="fas fa-angle-double-down" style={{ marginRight: '8px' }} />
             まずは内容を見せて欲しい
           </StyledButton>
         </div>
       </HeroSection>
 
-      <DetailSection>
+      <DetailSection id="detail">
         <h2>About MEATUP</h2>
         <h3>肉を通してわいがや交流するイベントです</h3>
         <div className="photo-list">
@@ -337,7 +353,7 @@ export default () => (
           </li>
           <li>
             <CardStyle>
-              <h4>職業マップ</h4>
+              <h4>職業分布</h4>
               <p className="pre">準備中...</p>
               {/*
                 [TODO]このイメージ
@@ -346,6 +362,10 @@ export default () => (
             </CardStyle>
           </li>
         </ul>
+        {/*
+        <CardStyle paddingZero>
+          <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12969.813026393902!2d139.6862211!3d35.6412029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5eb2f0df6438ea87!2sEAT+TOKYO+JAKUZURE!5e0!3m2!1sja!2sjp!4v1560860708018!5m2!1sja!2sjp" width="292" height="180" frameBorder="0" style={{ border: 0 }} allowFullScreen />
+        </CardStyle> */}
       </DetailSection>
       <FormSection id="joinform">
         <h2>JOINFORM</h2>
@@ -407,7 +427,9 @@ export default () => (
               <p>
                 事前決済をお願いしています！
                 <a href="https://twitter.com/search?q=%23meatup2019%20支払い" target="_blank" rel="noopener noreferrer">集金アプリKyash</a>
-                を利用する予定です。
+                を利用する予定です。参加費は
+                <b>4,000円</b>
+                です。
               </p>
               <p>
                 当日の支払いも対応可能ですので、ご相談ください〜！
@@ -417,15 +439,19 @@ export default () => (
             <li>
               <h4>4. 予定をカレンダーに追加</h4>
               <p>
-                <a target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MW5mcTlrbmJ1ZGZsYmt1dWo0MG5qczYyaW4gZnBvbGdxZ2wzYmdlcnE2NTJzaHIwaG9uc2NAZw&amp;tmsrc=fpolgqgl3bgerq652shr0honsc%40group.calendar.google.com">こちら</a>
-                のリンクよりカレンダーに追加できるので、ぜひご利用ください〜！
+                下記のリンクよりカレンダーに追加できるので、ぜひご利用ください〜！
               </p>
+              <a style={{ padding: '4px', marginTop: '16px', display: 'inline-block' }} target="_blank" rel="noopener noreferrer" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MW5mcTlrbmJ1ZGZsYmt1dWo0MG5qczYyaW4gZnBvbGdxZ2wzYmdlcnE2NTJzaHIwaG9uc2NAZw&amp;tmsrc=fpolgqgl3bgerq652shr0honsc%40group.calendar.google.com">
+Googleカレンダーに追加
+                <i className="far fa-calendar-plus" />
+              </a>
             </li>
             <li>
               <h4>5. 当日肉を食う！交流する！</h4>
-              <p>
-                お待ちしています
-                <span role="img" aria-label="niku">🔥🍖🍖🔥</span>
+              <p style={{ fontSize: '64px', lineHeight: '1', padding: '16px 0' }}>
+                <span role="img" aria-label="niku">
+                  🍖🍻🍖🍻
+                </span>
               </p>
             </li>
           </ul>
@@ -436,12 +462,13 @@ export default () => (
       <a style={{ color: colors.orange }} href="https://twitter.com/hashtag/meatup2019" target="_blank" rel="noopener noreferrer">#meatup2019</a>
       {' '}
         ハッシュタグを使って
-        Twitterを盛り上げよう！
+        イベントを盛り上げよう！
     </ShareSection>
     <Footer>
       オール準備 by
       {' '}
       <a href="https://twitter.com/hashtag/meatup2019実行委員会" target="_blank" rel="noopener noreferrer">meatup2019実行委員会</a>
     </Footer>
+    <ScrollToTopButton to="/#top"><i className="fas fa-angle-double-up" /></ScrollToTopButton>
   </Layout>
 );
