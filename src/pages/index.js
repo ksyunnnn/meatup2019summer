@@ -279,10 +279,13 @@ export default () => (
           <span>11:00 open ~ 19:00 close </span>
           <span>entry ¥4,000</span>
           <span className="place">
-            <a target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/NX273kTyHT5NrSvF8"><i className="fas fa-map-marker-alt" /></a>
+            <a style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href="https://goo.gl/maps/NX273kTyHT5NrSvF8">
+              <i className="fas fa-map-marker-alt" />
             EAT TOKYO JAKUZURE
+            </a>
           </span>
-          <span style={{ fontSize: '16px' }}>東京都目黒区上目黒5-30-12</span>
+          <span style={{ fontSize: '16px', letterSpacing: '1px' }}>東京都目黒区上目黒5-30-12</span>
+          <Link to="access" style={{ fontSize: '16px', letterSpacing: '1px' }}>詳しい行き方はこちら</Link>
         </div>
         <div className="button-wrapper">
           <StyledButton orange to="/#joinform">
