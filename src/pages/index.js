@@ -15,6 +15,7 @@ import Forms from '../components/organisms/Forms';
 import CardStyle from '../components/molecules/CardStyle';
 
 import { colors } from '../helpers/State';
+import media from '../helpers/MediaQuery';
 
 const copyToClipboard = () => {
   const userAgent = window.navigator.userAgent.toLowerCase();
@@ -41,17 +42,17 @@ const copyToClipboard = () => {
 
 
   textareaElement.value = `
-  ･名前
+･名前
 
-  ･性別
+･性別
 
-  ･Web歴
-    未経験 / 1年未満 / 2年~4年 / 5年~
-  ･職域
-    フロントエンド / バックエンド / デザイン / ディレクター / 学生 / その他
-  ･好きな肉の部位
+･Web歴
+未経験 / 1年未満 / 2年~4年 / 5年~
+･職域
+フロントエンド / バックエンド / デザイン / ディレクター / 学生 / その他
+･好きな肉の部位
 
-  ･肉に一番合うもの
+･肉に一番合うもの
 
   `;
   document.body.appendChild(textareaElement);
@@ -152,6 +153,8 @@ const DetailSection = styled.section`
   .photo-list {
     display: grid;
     row-gap: 24px;
+    max-width: 400px;
+    margin: auto;
     margin-bottom: 100px;
     > * {
       border: 5px solid ${colors.white};
@@ -159,6 +162,8 @@ const DetailSection = styled.section`
   }
 
   .schedule {
+    display: flex;
+    justify-content: center;
     margin-bottom: 100px;
     ul {
       display: grid;
@@ -169,9 +174,18 @@ const DetailSection = styled.section`
     }
   }
 
-  .data-list {
+  ul.data-list {
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: 320px 320px;
+    justify-content: center;
     margin-bottom: 100px;
     padding-bottom: 50px;
+    ${media.mobile`
+      column-gap: none;
+      grid-template-columns: none;
+    `}
     p.pre {
       font-weight: 900;
       font-size: 20px;
@@ -183,6 +197,8 @@ const DetailSection = styled.section`
 `;
 
 const FormSection = styled.section`
+  max-width: 780px;
+  margin: auto;
   padding: 0 40px;
   padding-top: 74px;
   h4 { margin-bottom: 16px; }
@@ -217,6 +233,10 @@ const ShareSection = styled.section`
   font-weight: 800;
   font-size: 20px;
   line-height: 25px;
+  text-align: center;
+  ${media.mobile`
+    
+  `}
 `;
 
 const Footer = styled.footer`
@@ -429,7 +449,7 @@ export default () => (
                 <a href="https://twitter.com/search?q=%23meatup2019%20支払い" target="_blank" rel="noopener noreferrer">集金アプリKyash</a>
                 を利用する予定です。参加費は
                 <b>4,000円</b>
-                です。
+                です。運営からの連絡の際に、決済用のURLをお送りするので、対応いただければ幸いです！
               </p>
               <p>
                 当日の支払いも対応可能ですので、ご相談ください〜！
