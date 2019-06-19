@@ -14,7 +14,7 @@ import Atom02 from '../components/molecules/Images/Atom02';
 
 import Forms from '../components/organisms/Forms';
 import CardStyle from '../components/molecules/CardStyle';
-import Header from '../components/molecules/Header';
+import Header from '../components/molecules/header';
 
 import { colors } from '../helpers/State';
 import media from '../helpers/MediaQuery';
