@@ -184,7 +184,6 @@ export default () => (
       <div className="header-nav-area">
         <div className="header-sns-back" id="tw">
           <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?button_hashtag=meatup2019&ref_src=twsrc%5Etfw&text=🍖🍻🎉" className="twitter-hashtag-button" data-show-count="false"><i className="fab fa-twitter fa-lg" style={{ color: '#1DA1F2' }} /></a>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
         </div>
         <div className="header-sns-back" id="fb">
           <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmeatup.love%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore"><i className="fab fa-facebook-f fa-lg" style={{ color: '#3A5997' }} /></a>
