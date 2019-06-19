@@ -11,8 +11,10 @@ import Oniku01 from '../components/molecules/Images/Oniku01';
 import Oniku02 from '../components/molecules/Images/Oniku02';
 import Atom01 from '../components/molecules/Images/Atom01';
 import Atom02 from '../components/molecules/Images/Atom02';
+
 import Forms from '../components/organisms/Forms';
 import CardStyle from '../components/molecules/CardStyle';
+import Header from '../components/molecules/Header';
 
 import { colors } from '../helpers/State';
 import media from '../helpers/MediaQuery';
@@ -113,7 +115,7 @@ const HeroSection = styled.section`
     span { display: block; }
     .place {
       padding-top: 1.5em;
-      i { 
+      i {
         margin-right: 8px;
         color: ${colors.orange};
        }
@@ -246,17 +248,22 @@ const Footer = styled.footer`
 
 const ScrollToTopButton = styled(Link)`
   position: fixed;
-  font-size: 48px;
-  bottom: 4px;
-  right: 4px;
+  font-size: 36px;
+  bottom: 24px;
+  right: 16px;
+  line-height: 64px;
   height: 64px;
   width: 64px;
+  background: #fff;
+  border-radius: 50%;
   text-align: center;
+  box-shadow: 0px 0px 1px rgba(0,0,0,.25);
 `;
 
 export default () => (
   <Layout>
     <SEO title="Home" />
+    <Header />
     <MainWrapper>
       <HeroSection id="top">
         <h3>
@@ -432,7 +439,7 @@ export default () => (
                 クリップボードにコピー
                 <i className="far fa-copy" />
               </button>
-              <p>
+              <p style={{ fontSize: '24px' }}>
                 <b>連絡先</b>
                 :
                 {' '}
