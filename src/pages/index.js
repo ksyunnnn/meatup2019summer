@@ -301,7 +301,12 @@ export default () => (
 
       <DetailSection id="detail">
         <h2>About MEATUP</h2>
-        <h3>肉を通してわいがや交流するイベントです</h3>
+        <h3>
+肉を通してわいがや交流する
+          <br />
+イベントです
+          <span role="img" aria-label="hand">✌🍖</span>
+        </h3>
         <div className="photo-list">
           <Oniku01 />
           <Atom01 />

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'MEATUP2019',
-    description: 'お肉🍖',
+    description: '肉を通してわいがや交流するイベントです✌🍖',
     author: '@ksyunnnn',
   },
   plugins: [

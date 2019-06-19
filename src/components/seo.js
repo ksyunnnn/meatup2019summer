@@ -39,7 +39,7 @@ function SEO({
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={site.siteMetadata.title}
       meta={[
         {
           name: 'description',
@@ -47,7 +47,7 @@ function SEO({
         },
         {
           property: 'og:title',
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           property: 'og:description',
@@ -67,11 +67,15 @@ function SEO({
         },
         {
           name: 'twitter:title',
-          content: title,
+          content: site.siteMetadata.title,
         },
         {
           name: 'twitter:description',
           content: metaDescription,
+        },
+        {
+          name: 'og:image',
+          content: 'https://meatup.love/icons/icon-512x512.png',
         },
       ].concat(meta)}
     />
