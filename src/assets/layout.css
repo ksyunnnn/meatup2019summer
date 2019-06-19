@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap&text=0123456789');
 @import url('https://use.fontawesome.com/releases/v5.1.0/css/all.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +15,31 @@
 body {
   font-family: 'Montserrat', 'Righteous', cursive;
   color: #333;
+  font-size: 12px;
 }
 
 a {
   color: inherit;
 }
+
+li {
+  list-style: none;
+}
+
+h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+h3 {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 40px;
+}
+h4 {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.46px;
+  }
