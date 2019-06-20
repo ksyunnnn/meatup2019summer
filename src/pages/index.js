@@ -51,7 +51,7 @@ const copyToClipboard = () => {
 ･Web歴
 未経験 / 1年未満 / 2年~4年 / 5年~
 ･職域
-フロントエンド / バックエンド / デザイン / ディレクター / 学生 / その他
+フロントエンド / バックエンド / モバイルエンジニア/ デザイン / ディレクター / 学生 / その他
 ･好きな肉の部位
 
 ･肉に一番合うもの
@@ -237,7 +237,7 @@ const ShareSection = styled.section`
   line-height: 25px;
   text-align: center;
   ${media.mobile`
-    
+
   `}
 `;
 
@@ -453,7 +453,7 @@ export default () => (
             <li>
               <h4>2. 返信を待つ</h4>
               <p>
-                2-3日以内に返信なければ、もう一度連絡ください
+                お手数ですが、2-3日以内に返信なければもう一度連絡ください
                 <span role="img" aria-label="bow">🙇</span>
               </p>
             </li>
