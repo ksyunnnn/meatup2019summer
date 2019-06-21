@@ -502,7 +502,7 @@ Googleカレンダーに追加
     <Footer>
       オール準備 by
       {' '}
-      <a href="https://twitter.com/hashtag/meatup2019実行委員会" target="_blank" rel="noopener noreferrer">meatup2019実行委員会</a>
+      <Link to="organizer">meatup2019実行委員会</Link>
     </Footer>
     <ScrollToTopButton to="/#top"><i className="fas fa-angle-double-up" /></ScrollToTopButton>
   </Layout>
