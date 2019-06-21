@@ -53,8 +53,11 @@ const NotFoundPage = () => (
           <a href="https://twitter.com/nerd0geek1" target="_blank" rel="noopener noreferrer">@nerd0geek1</a>
           /
           <a href="https://twitter.com/nuxt_suco" target="_blank" rel="noopener noreferrer">@nuxt_suco</a>
+          <br />
+          <br />
+          <br />
+          弊実行委員は、肉料理が食べたいために集まった団体です。既存の団体や企業などとの関係はとくにはありません。お肉を食べましょう！
         </p>
-
         <p>
           <br />
           <Link to="/">戻る</Link>
