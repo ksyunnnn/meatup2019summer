@@ -292,7 +292,7 @@ export default () => (
             </a>
           </span>
           <span style={{ fontSize: '16px', letterSpacing: '1px' }}>東京都目黒区上目黒5-30-12</span>
-          <Link to="access" style={{ fontSize: '16px', letterSpacing: '1px' }}>詳しい行き方はこちら</Link>
+          <Link to="/access" style={{ fontSize: '16px', letterSpacing: '1px' }}>詳しい行き方はこちら</Link>
         </div>
         <div className="button-wrapper">
           <StyledButton orange to="/#joinform">
@@ -502,7 +502,7 @@ Googleカレンダーに追加
     <Footer>
       オール準備 by
       {' '}
-      <Link to="organizer">meatup2019実行委員会</Link>
+      <Link to="/organizer">meatup2019実行委員会</Link>
     </Footer>
     <ScrollToTopButton to="/#top"><i className="fas fa-angle-double-up" /></ScrollToTopButton>
   </Layout>
