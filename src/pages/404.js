@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Header from '../components/molecules/header';
 
 
 const Wrapper = styled.div`
@@ -17,6 +18,7 @@ const Wrapper = styled.div`
 const NotFoundPage = () => (
   <Layout>
     <SEO title="Not found" />
+    <Header />
     <Wrapper>
       <div>
         <h1>404 NOT FOUND</h1>

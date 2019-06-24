@@ -51,7 +51,7 @@ const copyToClipboard = () => {
 ･Web歴
 未経験 / 1年未満 / 2年~4年 / 5年~
 ･職域
-フロントエンド / バックエンド / デザイン / ディレクター / 学生 / その他
+フロントエンド / バックエンド / モバイルエンジニア/ デザイン / ディレクター / 学生 / その他
 ･好きな肉の部位
 
 ･肉に一番合うもの
@@ -237,7 +237,7 @@ const ShareSection = styled.section`
   line-height: 25px;
   text-align: center;
   ${media.mobile`
-    
+
   `}
 `;
 
@@ -292,7 +292,7 @@ export default () => (
             </a>
           </span>
           <span style={{ fontSize: '16px', letterSpacing: '1px' }}>東京都目黒区上目黒5-30-12</span>
-          <Link to="access" style={{ fontSize: '16px', letterSpacing: '1px' }}>詳しい行き方はこちら</Link>
+          <Link to="/access" style={{ fontSize: '16px', letterSpacing: '1px' }}>詳しい行き方はこちら</Link>
         </div>
         <div className="button-wrapper">
           <StyledButton orange to="/#joinform">
@@ -427,7 +427,7 @@ export default () => (
                 <li>名前</li>
                 <li>性別</li>
                 <li>Web歴: 未経験 / 1年未満 / 2年~4年 / 5年~</li>
-                <li>職域: フロントエンド / バックエンド / デザイン / ディレクター / 学生 / その他</li>
+                <li>職域: フロントエンド / バックエンド / モバイルエンジニア / デザイン / ディレクター / 学生 / その他</li>
                 <li>好きな肉の部位</li>
                 <li>肉に一番合うもの</li>
               </ul>
@@ -453,7 +453,7 @@ export default () => (
             <li>
               <h4>2. 返信を待つ</h4>
               <p>
-                2-3日以内に返信なければ、もう一度連絡ください
+                お手数ですが、2-3日以内に返信なければもう一度連絡ください
                 <span role="img" aria-label="bow">🙇</span>
               </p>
             </li>
@@ -502,7 +502,7 @@ Googleカレンダーに追加
     <Footer>
       オール準備 by
       {' '}
-      <a href="https://twitter.com/hashtag/meatup2019実行委員会" target="_blank" rel="noopener noreferrer">meatup2019実行委員会</a>
+      <Link to="/organizer">meatup2019実行委員会</Link>
     </Footer>
     <ScrollToTopButton to="/#top"><i className="fas fa-angle-double-up" /></ScrollToTopButton>
   </Layout>
