@@ -4,11 +4,13 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import Header from '../components/molecules/header';
 
 // import twkoba from '//pbs.twimg.com/profile_images/1079641419537539072/EAFhOhhP_400x400.jpg';
 
 
 const Wrapper = styled.div`
+  padding-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,13 +30,14 @@ const Wrapper = styled.div`
   }
   .member-list{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
   }
   .member{
     width: 120px;
     height: 100%;
-    margin: 0 30px;
+    margin: 30px;
     .tw-icon{
       width: 120px;
       height: 120px;
@@ -46,9 +49,10 @@ const Wrapper = styled.div`
   }
 `;
 
-const NotFoundPage = () => (
+const OrganizerPage = () => (
   <Layout>
     <SEO title="ORGANIZER" />
+    <Header />
     <Wrapper>
       <div>
         <h1>ORGANIZER</h1>
@@ -155,4 +159,4 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export default NotFoundPage;
+export default OrganizerPage;
