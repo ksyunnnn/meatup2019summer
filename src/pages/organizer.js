@@ -114,7 +114,7 @@ const OrganizerPage = () => (
             </a>
             <a href="https://twitter.com/akatsuki174" target="_blank" rel="noopener noreferrer" className="member">
               <img src="https://pbs.twimg.com/profile_images/902547871597174785/5N8hqo2H_400x400.jpg" alt="icon" className="tw-icon" />
-              <span className="tw-name">@murokaco</span>
+              <span className="tw-name">@akatsuki174</span>
             </a>
           </div>
           <h2>企画アイディア/当日運営</h2>
