@@ -95,7 +95,7 @@ const HeroSection = styled.section`
 const StyledButton = styled(Link)`
   width: 300px;
   height: 48px;
-  line-height: 48px;
+  line-height: 46px;
   color: ${props => props.orange && colors.orange};
   font-weight: 800;
   border: 3px solid;
