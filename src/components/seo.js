@@ -58,6 +58,14 @@ function SEO({
           content: 'website',
         },
         {
+          property: 'og:image',
+          content: 'https://meatup.love/ogp.png',
+        },
+        {
+          property: 'og:url',
+          content: 'https://meatup.love',
+        },
+        {
           name: 'twitter:card',
           content: 'summary_large_image',
         },
@@ -72,10 +80,6 @@ function SEO({
         {
           name: 'twitter:description',
           content: metaDescription,
-        },
-        {
-          name: 'og:image',
-          content: 'https://meatup.love/ogp.png',
         },
       ].concat(meta)}
     />
