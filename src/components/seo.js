@@ -75,7 +75,7 @@ function SEO({
         },
         {
           name: 'og:image',
-          content: 'https://meatup.love/icons/icon-512x512.png',
+          content: 'https://meatup.love/ogp.png',
         },
       ].concat(meta)}
     />
