@@ -17,9 +17,10 @@ import CardStyle from '../components/molecules/CardStyle';
 import Header from '../components/molecules/header';
 
 import {
-  colors, DataContext, baseUrl, copyToClipboard, countUp,
+  colors, DataContext, baseUrl, copyToClipboard,
 } from '../helpers/State';
 import media from '../helpers/MediaQuery';
+import DataList from '../components/organisms/DataList';
 
 const copyValue = `･名前
 
@@ -136,27 +137,6 @@ const DetailSection = styled.section`
     }
     li {
       letter-spacing: 1px;
-    }
-  }
-
-  ul.data-list {
-    display: grid;
-    row-gap: 16px;
-    column-gap: 16px;
-    grid-template-columns: 320px 320px;
-    justify-content: center;
-    margin-bottom: 100px;
-    padding-bottom: 50px;
-    ${media.mobile`
-      column-gap: none;
-      grid-template-columns: none;
-    `}
-    p.pre {
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: 1.46px;
-      color: #B1B1B1;
-      margin-top: 40px;
     }
   }
 `;
@@ -340,36 +320,9 @@ export default () => {
             現在受付けている参加者データです
               <span role="img" aria-label="hand">✌</span>
             </h3>
-            <ul className="data-list">
-              <li>
-                <CardStyle>
-                  <h4>参加人数</h4>
-                  <p className="pre">{data ? data.calc.total : '...'}</p>
-                </CardStyle>
-              </li>
-              <li>
-                <CardStyle>
-                  <h4>男女比</h4>
-                  <p className="pre">準備中...</p>
-                </CardStyle>
-              </li>
-              <li>
-                <CardStyle>
-                  <h4>Web歴</h4>
-                  <p className="pre">準備中...</p>
-                </CardStyle>
-              </li>
-              <li>
-                <CardStyle>
-                  <h4>職業分布</h4>
-                  <p className="pre">準備中...</p>
-                  {/*
-                  [TODO]このイメージ
-                  https://images.app.goo.gl/BuCu2w8DXe1ZGQpW6
-                 */}
-                </CardStyle>
-              </li>
-            </ul>
+
+            <DataList />
+
             {/*
           <CardStyle paddingZero>
             <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12969.813026393902!2d139.6862211!3d35.6412029!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5eb2f0df6438ea87!2sEAT+TOKYO+JAKUZURE!5e0!3m2!1sja!2sjp!4v1560860708018!5m2!1sja!2sjp" width="292" height="180" frameBorder="0" style={{ border: 0 }} allowFullScreen />

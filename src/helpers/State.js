@@ -12,13 +12,13 @@ export const baseUrl = 'https://script.googleusercontent.com/macros/echo?user_co
 
 export const DataContext = React.createContext();
 
-export const countUp = (exec, max) => {
+export const countAndExec = (exec, max) => {
   let count = 0;
   const countHandle = setInterval(() => {
     exec();
     // eslint-disable-next-line no-plusplus
     if (count++ > max - 2)clearInterval(countHandle);
-  }, 50);
+  }, 60);
 };
 
 export const copyToClipboard = (copyValue) => {
