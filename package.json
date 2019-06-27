@@ -7,6 +7,8 @@
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "babel-plugin-styled-components": "^1.10.0",
+    "chart.js": "^2.8.0",
+    "classnames": "^2.2.6",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
@@ -22,6 +24,7 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-source-filesystem": "^2.0.36",
     "gatsby-transformer-sharp": "^2.1.19",
+    "primereact": "^3.1.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
