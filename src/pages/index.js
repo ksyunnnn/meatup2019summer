@@ -386,14 +386,15 @@ export default () => {
                 <li>
                   <h4>3. 参加費を払う</h4>
                   <p>
-                  事前決済をお願いしています！
+                  支払い方法は、当日の現金払いか、
                     <a href="https://twitter.com/search?q=%23meatup2019%20支払い" target="_blank" rel="noopener noreferrer">集金アプリKyash</a>
                   を利用する予定です。参加費は
                     <b>4,000円</b>
-                  です。運営からの連絡の際に、決済用のURLをお送りするので、対応いただければ幸いです！
+                  になります。
+                    <br />
+                  Kyashでの事前決済をご希望の方は、運営から決済用のURLをお送りしますので、ご連絡・ご対応いただければ幸いです！
                   </p>
                   <p>
-                  当日の支払いも対応可能ですので、ご相談ください〜！
                     <span role="img" aria-label="hand">✌</span>
                   </p>
                 </li>
