@@ -139,6 +139,22 @@ const DetailSection = styled.section`
       letter-spacing: 1px;
     }
   }
+  .contents {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 100px;
+    > div {
+      display: grid;
+      row-gap: 16px;
+    }
+    h4 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    p {
+      padding: 0 16px;
+    }
+  }
 `;
 
 const FormSection = styled.section`
@@ -308,6 +324,29 @@ export default () => {
                  18:00~19:00 : みんなで撤収
                   </li>
                 </ul>
+              </CardStyle>
+            </div>
+
+            <h2>Contents</h2>
+            <div className="contents">
+              <CardStyle>
+                <div>
+                  <h4>音楽</h4>
+                  <p>
+                好きな音楽流しながらゆるくやります〜！リクエスト受け付けます
+                    <span role="img" aria-label="ok">🙆</span>
+                  楽器持参してくれる方募集です
+                    <span role="img" aria-label="muscle">💪</span>
+                  </p>
+                </div>
+                <div>
+                  <h4>ゲーム</h4>
+                  <p>ボドゲとかゲーム置いてます！ディスプレイはあるので持ち込み歓迎〜！</p>
+                </div>
+                <div>
+                  <h4>その他</h4>
+                  <p>準備中予定！</p>
+                </div>
               </CardStyle>
             </div>
 
