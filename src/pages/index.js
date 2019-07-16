@@ -345,7 +345,7 @@ export default () => {
                 </div>
                 <div>
                   <h4>その他</h4>
-                  <p>準備中予定！</p>
+                  <p>これ以外にも準備予定です〜！期待してて！</p>
                 </div>
               </CardStyle>
             </div>
